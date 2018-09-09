@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.github.blaugold.intellij.datanucleus</id>
+    <name>DataNucleus Runtime Enhancement</name>
+    <vendor email="gabriel@terwesten.net" url="https://github.com/blaugold/">Gabriel Terwesten</vendor>
+
+    <description><![CDATA[
+    This plugin provides a <strong>Run Configuration Extension</strong> which adds the required jvm arguments
+    to enable runtime enhancement of persistence capable classes.
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products-->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <runConfigurationExtension
+                implementation="com.github.blaugold.intellij.datanucleus.RunConfigurationExtension"/>
+    </extensions>
+
+</idea-plugin>
