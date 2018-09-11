@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.github.blaugold'
-version '1.0'
+version '1.1'
 
 sourceCompatibility = 1.8
 
@@ -22,5 +22,16 @@ intellij {
 
 patchPluginXml {
     changeNotes """
-      Initial release"""
+        <ul>
+            <li>Update readme</li>
+            <li>Fix error where plugin configuration is shared across all run configurations</li>
+        </ul>
+      """
+}
+
+apply from: 'gradle.properties'
+
+publishPlugin {
+    username intellijPublishUsername
+    password intellijPublishPassword
 }
